@@ -1,0 +1,73 @@
+html,body {
+	margin: 0;
+	padding: 0;
+}
+#page {
+	background-image: url(chevron.svg), none;
+	background-size: 10%;
+	background-color: #fff;
+	border: solid 1px #000;
+	clear: both;
+	height: 960px;
+	margin: 0px auto;
+	width: 768px;
+}
+#area {
+	box-sizing: border-box;
+	height: 100%;
+	padding: 100px 0;
+	overflow: hidden;
+	text-align: center;
+	width: 100%;
+}
+#area .display-item { position: relative; }
+#area .display-item .wrapper { position: relative; }
+
+#area .date {
+	color: #585455;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100px;
+    font-weight: 100;
+    line-height: 1em;
+    position: relative;
+    z-index: 2;
+}
+#area .name {
+	color: #00A089;
+	font-family: 'Bitter', serif;
+    font-size: 75px;
+    height: 100%;
+    line-height: 1.5em;
+    opacity: 0.2;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    width: 100%;
+}
+#input {
+    background: #fff;
+    border: solid 1px;
+    left: 0;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+}
+
+@media print {
+	@page { margin: 0; padding: 0; }
+	* { margin: 0; padding: 0; }
+	body {
+		background-image: url(chevron.svg), none;
+		background-size: 10%;
+		background-color: #fff;
+	}
+	#page {
+		background: none;
+		border-color: rgba(0,0,0,0.1);
+		height: 10in;
+		margin: 0.25in 0.25in;
+		page-break-after: always;
+		width: 8in;
+	}
+	#input { display: none; }
+}
